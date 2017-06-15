@@ -6,7 +6,7 @@ app.config(function($routeProvider) {
     })
     .when("/newNote", {
       templateUrl: "partials/newNote.html",
-      controller: "newNoteCtrl",
+      controller: "NewNoteCtrl",
     })
     .otherwise("/homeBible");
 });
