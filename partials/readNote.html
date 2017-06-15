@@ -1,0 +1,17 @@
+<div class="row">
+	<div class="panel panel-success">
+		<div class="panel-body panel-transparent">
+			<h3>{{note.scripture_ref}}</h3>
+			<h4>{{note.note}}</h4>
+			<h4>{{note.url}}</h4>
+			<img src="{{note.img}}"/>
+			<h4>{{note.date}}</h4>
+			<h4>{{note.location}}</h4>
+			<h4>{{note.pastor}}</h4>
+      <div class="pull-right">
+      	<button class="btn btn-success fa fa-pencil" ng-click="inputChange(note.id)"" aria-hidden="true"></button>
+      	<button class="btn btn-danger fa fa-trash-o" ng-click="deleteItem(note.id)"></button>
+      </div>
+		</div>
+	</div>
+</div>

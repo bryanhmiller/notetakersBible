@@ -1,0 +1,39 @@
+<div>
+	<h3>New Note</h3>
+    <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-primary">Personal</button>
+        <button type="button" class="btn btn-primary">Sermon</button>
+        <button type="button" class="btn btn-primary">Keyword</button>
+    </div>
+    <h5>Please select the type of note</h5>
+        <form>
+            <div class="form-group">
+                <label>Keyword</label>
+                <input type="text" class="form-control" placeholder="Enter keyword" ng-model="newKeyword.word"/>
+            </div>
+        </form>
+        <form>
+            <div class="form-group">
+                <label>Scripture Reference</label>
+                <input type="text" class="form-control" placeholder="Genesis 1:1" ng-model="newNote.scripture_ref"/>
+                <label>Note</label>
+                <input type="text" class="form-control" placeholder="Enter note text here ..." ng-model="newNote.note"/>
+            </div>
+        
+            <div class="form-group">
+                <label>Web Link</label>
+                <input type="text" class="form-control" placeholder="www.relevantlink.com" ng-model="newNote.url"/>
+                <label>Image Link</label>
+                <input type="text" class="form-control" placeholder="webaddress/image.jpg" ng-model="newNote.img"/>
+            </div>
+            <div class="form-group">
+                <label>Date</label>
+                <input type="text" class="form-control" placeholder="09-17-2017" ng-model="newNote.date"/>
+                <label>Location</label>
+                <input type="text" class="form-control" placeholder="First Baptist Atlanta" ng-model="newNote.location"/>
+                <label>Pastor</label>
+                <input type="text" class="form-control" placeholder="Charles F. Stanley" ng-model="newNote.pastor"/>
+            </div>
+            <button class="btn btn-primary" ng-click="addNewNote()">Save Note</button>
+            <button class="btn btn-primary" ng-click="addNewKeyword()">Add Keyword</button>
+        </form>

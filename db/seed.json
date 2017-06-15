@@ -1,0 +1,65 @@
+{
+    "notes": {
+        "note0": {
+            "date": "12-25-17@17:00",
+            "img": "image.jpg",
+            "is_personal": false,
+            "is_sermon": true,
+            "is_verses": false,
+            "location": "First Baptist Atlanta",
+            "note": "This is the note that I wrote for this seed file",
+            "note_id": "sodfijweofij2",
+            "pastor": "Charles Stanley",
+            "scripture_ref": "Genesis1",
+            "uid": "",
+            "url": "www.url.com"
+        },
+       "note1": {
+            "date": "6-15-17@18:00",
+            "img": "anotherimage.jpg",
+            "is_personal": true,
+            "is_sermon": false,
+            "is_verses": false,
+            "location": "",
+            "note": "This is the note that I copied for this seed file",
+            "note_id": "fefge",
+            "pastor": "",
+            "scripture_ref": "John 3:16",
+            "uid": "",
+            "url": "www.anotherurl.com"
+        },
+       "note2": {
+            "date": "11-03-1942@17:00",
+            "img": "image.jpg",
+            "is_personal": false,
+            "is_sermon": false,
+            "is_verses": true,
+            "location": "",
+            "note": "I don't remember what is_verses is for",
+            "note_id": "oijji",
+            "pastor": "",
+            "scripture_ref": "Proverbs 3:5",
+            "uid": "",
+            "url": ""
+        }        
+    },    
+    "keyword": {
+        "keyword0": {
+            "note_id": "sodfijweofij2",
+            "word": "FAITH"        
+        },
+        "keyword1": {
+            "note_id": "fefge",
+            "word": "HOPE"        
+        }    },
+    "users": {
+        "user0": {
+            "uid": "",
+            "username": "Abe"
+        },
+        "user1": {
+            "uid": "c0tjEn777JdxHeSGziUjDaJaseG3",
+            "username": "Bebe"
+        }
+    }
+}
