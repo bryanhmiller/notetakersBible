@@ -11,7 +11,7 @@
             "note_id": "sodfijweofij2",
             "pastor": "Charles Stanley",
             "scripture_ref": "Genesis1",
-            "uid": "",
+            "uid": "2QJUZxolbTeepcW9sj44pLdTz622",
             "url": "www.url.com"
         },
        "note1": {
@@ -25,7 +25,7 @@
             "note_id": "fefge",
             "pastor": "",
             "scripture_ref": "John 3:16",
-            "uid": "",
+            "uid": "VkleUbXR8Rgw5uUt1IreAKB4bpL2",
             "url": "www.anotherurl.com"
         },
        "note2": {
@@ -39,7 +39,7 @@
             "note_id": "oijji",
             "pastor": "",
             "scripture_ref": "Proverbs 3:5",
-            "uid": "",
+            "uid": "VkleUbXR8Rgw5uUt1IreAKB4bpL2",
             "url": ""
         }        
     },    
@@ -54,12 +54,12 @@
         }    },
     "users": {
         "user0": {
-            "uid": "",
+            "uid": "VkleUbXR8Rgw5uUt1IreAKB4bpL2",
             "username": "Abe"
         },
         "user1": {
-            "uid": "c0tjEn777JdxHeSGziUjDaJaseG3",
-            "username": "Bebe"
+            "uid": "2QJUZxolbTeepcW9sj44pLdTz622",
+            "username": "Cece"
         }
     }
 }
