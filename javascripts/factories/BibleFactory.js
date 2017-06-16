@@ -1,17 +1,26 @@
 app.factory("BibleFactory", function($http, $q, apiBible, FIREBASE_CONFIG) {
 
   let getBible = () => {
-    let Bible = {};
     return $q((resolve, reject) => {
-      $http.get(`https://apiBible@bibles.org/v2/books/eng-GNTD:2Tim/chapters.js`)
+      // let auth = $base64.encode('');
+      // let headers = {'Authorization': 'Basic ' + auth};
+      let auth = 'username=&grant_type=password';
+      $http({
+        method:'GET',
+        url:'https://bibles.org/v2/versions/eng-KJVA/books.js?include_chapters=true',
+        headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+        data:auth
+      })
       .then((chapters) => {
           resolve(chapters);
-          var BibleCollection = chapters;
-          console.log("BibleCollection", BibleCollection);
       }).catch((error) => {
         reject(error);
       });  
     });  
   };
+
+  return {getBible:getBible};
 });
 

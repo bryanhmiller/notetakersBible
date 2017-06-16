@@ -8,7 +8,6 @@
             "is_verses": false,
             "location": "First Baptist Atlanta",
             "note": "This is the note that I wrote for this seed file",
-            "note_id": "sodfijweofij2",
             "pastor": "Charles Stanley",
             "scripture_ref": "Genesis1",
             "uid": "2QJUZxolbTeepcW9sj44pLdTz622",
@@ -22,7 +21,6 @@
             "is_verses": false,
             "location": "",
             "note": "This is the note that I copied for this seed file",
-            "note_id": "fefge",
             "pastor": "",
             "scripture_ref": "John 3:16",
             "uid": "VkleUbXR8Rgw5uUt1IreAKB4bpL2",
@@ -36,7 +34,6 @@
             "is_verses": true,
             "location": "",
             "note": "I don't remember what is_verses is for",
-            "note_id": "oijji",
             "pastor": "",
             "scripture_ref": "Proverbs 3:5",
             "uid": "VkleUbXR8Rgw5uUt1IreAKB4bpL2",
@@ -45,11 +42,11 @@
     },    
     "keyword": {
         "keyword0": {
-            "note_id": "sodfijweofij2",
+            "note_id": "note2",
             "word": "FAITH"        
         },
         "keyword1": {
-            "note_id": "fefge",
+            "note_id": "note1",
             "word": "HOPE"        
         }    },
     "users": {
