@@ -11,26 +11,26 @@ app.factory("NoteFactory", function($http, $q, FIREBASE_CONFIG) {
     });
   };
 
-  let getItemList = (userId) => {
-    // let itemz = [];
-    // console.log("userId in getItemList", userId);
-    // return $q((resolve, reject) => {
-    //   $http.get(`${FIREBASE_CONFIG.databaseURL}/addresses.json?orderBy="uid"&equalTo="${userId}"`)
-    //   .then((fbItems) => {
-    //     console.log("fbItems in getItemList", fbItems);
-    //       var itemCollection = fbItems.data;
-    //       if(itemCollection !== null) {
-    //         Object.keys(itemCollection).forEach((key) => {
-    //           itemCollection[key].id=key;
-    //           itemz.push(itemCollection[key]);
-    //         });
-    //       }
-    //       resolve(itemz);
-    //       console.log("itemz in AddressFactory", itemz)
-    //   }).catch((error) => {
-    //     reject(error);
-    //   });  
-    // });  
+  let getNoteList = (userId) => {
+    let notes = [];
+    console.log("userId in getItemList", userId);
+    return $q((resolve, reject) => {
+      $http.get(`${FIREBASE_CONFIG.databaseURL}/notes.json`)
+      .then((fbNotes) => {
+        console.log("fbNotes in getNoteList", fbNotes);
+          var noteCollection = fbNotes.data;
+          if(noteCollection !== null) {
+            Object.keys(noteCollection).forEach((key) => {
+              noteCollection[key].id=key;
+              notes.push(noteCollection[key]);
+            });
+          }
+          resolve(notes);
+          console.log("notes in NoteFactory", notes);
+      }).catch((error) => {
+        reject(error);
+      });  
+    });  
   };
 
   let getSingleItem = (id) => {
@@ -81,6 +81,6 @@ app.factory("NoteFactory", function($http, $q, FIREBASE_CONFIG) {
   };
 
 
-  return {getItemList:getItemList, getSingleItem:getSingleItem, postNewNote:postNewNote, deletz:deletz, editItem:editItem};
+  return {getNoteList:getNoteList, getSingleItem:getSingleItem, postNewNote:postNewNote, deletz:deletz, editItem:editItem};
 
 });

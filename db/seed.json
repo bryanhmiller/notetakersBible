@@ -6,6 +6,7 @@
             "is_personal": false,
             "is_sermon": true,
             "is_verses": false,
+            "keyword_id":"keyword0",
             "location": "First Baptist Atlanta",
             "note": "This is the note that I wrote for this seed file",
             "pastor": "Charles Stanley",
@@ -19,6 +20,7 @@
             "is_personal": true,
             "is_sermon": false,
             "is_verses": false,
+            "keyword_id": "keyword0",
             "location": "",
             "note": "This is the note that I copied for this seed file",
             "pastor": "",
@@ -32,6 +34,7 @@
             "is_personal": false,
             "is_sermon": false,
             "is_verses": true,
+            "keyword_id": "",
             "location": "",
             "note": "I don't remember what is_verses is for",
             "pastor": "",
@@ -42,11 +45,9 @@
     },    
     "keyword": {
         "keyword0": {
-            "note_id": "note2",
             "word": "FAITH"        
         },
         "keyword1": {
-            "note_id": "note1",
             "word": "HOPE"        
         }    },
     "users": {
