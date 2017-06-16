@@ -33,31 +33,19 @@ app.factory("NoteFactory", function($http, $q, FIREBASE_CONFIG) {
     });  
   };
 
-  let getSingleItem = (id) => {
-    // return $q((resolve, reject) => {
-    //   $http.get(`${FIREBASE_CONFIG.databaseURL}/addresses/${id}.json`)
-    //   .then((resultz) => {
-    //     resultz.data.id = id;
-    //     resolve(resultz);
-    //   }).catch((error) => {
-    //     console.log("getSingleItem error", error);
-    //   });
-    // });
+  let getSingleNote = (id) => {
+    return $q((resolve, reject) => {
+      $http.get(`${FIREBASE_CONFIG.databaseURL}/notes/${id}.json`)
+      .then((resultz) => {
+        resultz.data.id = id;
+        resolve(resultz);
+      }).catch((error) => {
+        console.log("getSingleNote error", error);
+      });
+    });
   };
 
-
-  let deletz = (itemId) => {
-    // return $q ((resolve, reject) => {
-    //   $http.delete(`${FIREBASE_CONFIG.databaseURL}/addresses/${itemId}.json`)
-    //   .then((resultz) => {
-    //     resolve(resultz);
-    //   }).catch((error) => {
-    //     reject(error);
-    //   });
-    // });
-  };
-
-  let editItem = (address) => {
+  let editNote = (note) => {
     // console.log("address in AddressFactory", address);
     // return $q((resolve, reject) => {
     //   $http.put(`${FIREBASE_CONFIG.databaseURL}/addresses/${address.id}.json`, 
@@ -79,6 +67,18 @@ app.factory("NoteFactory", function($http, $q, FIREBASE_CONFIG) {
     //   });
     // });
   };
+
+  let deletz = (itemId) => {
+    // return $q ((resolve, reject) => {
+    //   $http.delete(`${FIREBASE_CONFIG.databaseURL}/addresses/${itemId}.json`)
+    //   .then((resultz) => {
+    //     resolve(resultz);
+    //   }).catch((error) => {
+    //     reject(error);
+    //   });
+    // });
+  };
+
 
 
   return {getNoteList:getNoteList, getSingleItem:getSingleItem, postNewNote:postNewNote, deletz:deletz, editItem:editItem};
