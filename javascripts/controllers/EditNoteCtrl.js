@@ -1,15 +1,15 @@
 app.controller("EditNoteCtrl", function($location, $routeParams, $scope, NoteFactory) {
-  $scope.note = {};
+  $scope.Note = {};
 
   NoteFactory.getSingleNote($routeParams.id).then((results) => {
-    $scope.note = results.data;
-    console.log("getSingleNote $scope.newNote", $scope.note);
+    $scope.Note = results.data;
+    console.log("getSingleNote $scope.newNote", $scope.Note);
   }).catch((error) => {
   	console.log("getSingleNote error", error);
   });
 
   $scope.addNewNote = () => {
-  	NoteFactory.editNote($scope.note).then(() => {
+  	NoteFactory.editNote($scope.Note).then(() => {
   		$location.url("/readNote");
   	}).catch((error) => {
   		console.log("editItem error", error);

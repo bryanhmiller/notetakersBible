@@ -51,15 +51,15 @@ app.factory("NoteFactory", function($http, $q, FIREBASE_CONFIG) {
         JSON.stringify({
           date: note.date,
           img: note.img,
-          // is_personal: note.is_personal,
-          // is_sermon: note.is_sermon,
-          // is_verses: note.is_verses,
-          // keyword_id: note.keyword_id,
+          is_personal: note.is_personal,
+          is_sermon: note.is_sermon,
+          is_verses: note.is_verses,
+          keyword_id: note.keyword_id,
           location: note.location,
           note: note.note,
           pastor: note.pastor,
           scripture_ref: note.scripture_ref,
-          // uid: note.uid,
+          uid: note.uid,
           url: note.url
         })  
       ).then((resultz) => {
