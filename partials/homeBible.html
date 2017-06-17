@@ -7,16 +7,15 @@
         Book <span class="caret"></span>
       </button>
       <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-body">
-        <li ng-repeat="book in books" ng-click="setSelectedBook(book)">{{book.book_name}}
-          <div class="btn-group" uib-dropdown dropdown-append-to-body>
-            <button id="btn-append-to-body" type="button" class="btn btn-primary" uib-dropdown-toggle>
-              Chapters <span class="caret"></span>
-            </button>
-            <ul ng-repeat="chapter in books" class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-body">
-              <li ng-click="setSelectedBook(book)">{{book.chapters}}</li>
-            </ul>
-          </div>  
-        </li>
+        <li ng-repeat="book in books" ng-click="loadChapters(book.book_id)">{{book.book_name}}</li>
+      </ul>
+    </div>
+    <div class="btn-group" uib-dropdown dropdown-append-to-body>
+      <button id="btn-append-to-body" type="button" class="btn btn-primary" uib-dropdown-toggle>
+        Chapters <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-body">
+        <li ng-repeat="chapter in chapters" ng-click="loadVerses(chapter.chapter_id)">{{chapter.chapter_id}}</li>
       </ul>
     </div>  
   </div><!-- /.col-lg-12 -->

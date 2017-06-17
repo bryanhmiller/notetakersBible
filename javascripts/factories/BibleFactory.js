@@ -13,7 +13,40 @@ app.factory("BibleFactory", function($http, $q) {
     });  
   };
 
-  return {getBible:getBible};
+  let getChapters = (book_id) => {
+    console.log("book_id in getChapters", book_id);
+    let chapters = [];
+    return $q((resolve, reject) => {
+      $http.get(`http://dbt.io/library/chapter?key=c0c769e931f78307a6c1c65cc5bd1d8c&dam_id=ENGNAS&book_id=${book_id}&v=2`)
+      .then((apiChapters) => {
+          resolve(apiChapters.data);
+          console.log("apiChapters.data in getChapters",apiChapters.data);
+      }).catch((error) => {
+        reject(error);
+      });  
+    });  
+  };
+
+  let getVerses = (book_id, book_order, chapter_id) => {
+    console.log("book_id", book_id, "book_order", book_order, "chapter_id", chapter_id);
+    let verses = [];
+    let testament = "OT";
+    let bookNumber = parseInt(book_order);
+    if (bookNumber > 39) {
+      testament = "NT";
+    }
+    return $q((resolve, reject) => {
+      $http.get(`http://dbt.io/text/verse?key=c0c769e931f78307a6c1c65cc5bd1d8c&dam_id=${testament}&book_id=${book_id}&chapter_id=${chapter_id}&v=2`)
+      .then((apiVerses) => {
+          resolve(apiVerses.data);
+          console.log("apiVerses.data in getVerses",apiVerses.data);
+      }).catch((error) => {
+        reject(error);
+      });  
+    });  
+  };
+
+  return {getBible:getBible, getChapters:getChapters, getVerses:getVerses};
 
 });
 // "use strict";
