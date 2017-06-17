@@ -13,7 +13,7 @@ app.factory("NoteFactory", function($http, $q, FIREBASE_CONFIG) {
 
   let getNoteList = (userId) => {
     let notes = [];
-    console.log("userId in getItemList", userId);
+    console.log("userId in getNoteList", userId);
     return $q((resolve, reject) => {
       $http.get(`${FIREBASE_CONFIG.databaseURL}/notes.json`)
       .then((fbNotes) => {
@@ -26,7 +26,6 @@ app.factory("NoteFactory", function($http, $q, FIREBASE_CONFIG) {
             });
           }
           resolve(notes);
-          console.log("notes in NoteFactory", notes);
       }).catch((error) => {
         reject(error);
       });  
@@ -46,41 +45,45 @@ app.factory("NoteFactory", function($http, $q, FIREBASE_CONFIG) {
   };
 
   let editNote = (note) => {
-    // console.log("address in AddressFactory", address);
-    // return $q((resolve, reject) => {
-    //   $http.put(`${FIREBASE_CONFIG.databaseURL}/addresses/${address.id}.json`, 
-    //     JSON.stringify({
-    //       firstName: address.firstName,
-    //       lastName: address.lastName,
-    //       streetAddress: address.streetAddress,
-    //       city: address.city,
-    //       state: address.state,
-    //       zipCode: address.zipCode,
-    //       phone: address.phone,
-    //       email: address.email
-    //     })  
-    //   ).then((resultz) => {
-    //     resolve(resultz);
-    //     console.log("editItem resultz", resultz);
-    //   }).catch((error) => {
-    //     console.log("editItem error", error);
-    //   });
-    // });
+    console.log("note in NoteFactory", note);
+    return $q((resolve, reject) => {
+      $http.put(`${FIREBASE_CONFIG.databaseURL}/notes/${note.id}.json`, 
+        JSON.stringify({
+          date: note.date,
+          img: note.img,
+          // is_personal: note.is_personal,
+          // is_sermon: note.is_sermon,
+          // is_verses: note.is_verses,
+          // keyword_id: note.keyword_id,
+          location: note.location,
+          note: note.note,
+          pastor: note.pastor,
+          scripture_ref: note.scripture_ref,
+          // uid: note.uid,
+          url: note.url
+        })  
+      ).then((resultz) => {
+        resolve(resultz);
+        console.log("editItem resultz", resultz);
+      }).catch((error) => {
+        console.log("editItem error", error);
+      });
+    });
   };
 
-  let deletz = (itemId) => {
-    // return $q ((resolve, reject) => {
-    //   $http.delete(`${FIREBASE_CONFIG.databaseURL}/addresses/${itemId}.json`)
-    //   .then((resultz) => {
-    //     resolve(resultz);
-    //   }).catch((error) => {
-    //     reject(error);
-    //   });
-    // });
+  let deletz = (noteId) => {
+    return $q ((resolve, reject) => {
+      $http.delete(`${FIREBASE_CONFIG.databaseURL}/notes/${noteId}.json`)
+      .then((resultz) => {
+        resolve(resultz);
+      }).catch((error) => {
+        reject(error);
+      });
+    });
   };
 
 
 
-  return {getNoteList:getNoteList, getSingleItem:getSingleItem, postNewNote:postNewNote, deletz:deletz, editItem:editItem};
+  return {getNoteList:getNoteList, getSingleNote:getSingleNote, postNewNote:postNewNote, deletz:deletz, editNote:editNote};
 
 });

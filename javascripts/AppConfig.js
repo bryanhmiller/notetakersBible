@@ -21,5 +21,9 @@ app.config(function($routeProvider) {
       templateUrl: "partials/readNote.html",
       controller: "ReadNoteCtrl",
     })
+    .when("/editNote/:id", {
+      templateUrl: "partials/editNote.html",
+      controller: "EditNoteCtrl"
+    })
     .otherwise("/auth");
 });
