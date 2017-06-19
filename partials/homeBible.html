@@ -20,6 +20,6 @@
     </div>  
   </div><!-- /.col-lg-12 -->
   <div class="col-lg-12 panel panel-success">
-  	<p ng-repeat="verse in verses">{{verse.verse_id}} {{verse.verse_text}}</p>
+  	<p ng-repeat="verse in verses" ng-click="getVerseData(verse.book_name, verse.chapter_id, verse.verse_id)">{{verse.verse_id}} {{verse.verse_text}}</p>
   </div>
 </div><!-- /.row -->

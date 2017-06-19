@@ -46,6 +46,10 @@ app.controller("BibleCtrl", function($rootScope, $scope, BibleFactory) {
     });
   };
 
+  $scope.getVerseData = (book_name, chapter_id, verse_id) => {
+    console.log("verse data", book_name, chapter_id, verse_id);
+  };
+  
   loadBible();
 
 
