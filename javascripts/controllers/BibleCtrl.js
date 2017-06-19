@@ -1,6 +1,8 @@
 app.controller("BibleCtrl", function($rootScope, $scope, BibleFactory) {
-
-	console.log("inside BibleCtrl.js");
+  $scope.bookName = {};
+	$scope.bookNumber = {};
+  let NT = "ENGNASN2ET";
+  let OT = "ENGNASO2ET";
 
   let loadBible = () => {
     BibleFactory.getBible()
@@ -12,8 +14,11 @@ app.controller("BibleCtrl", function($rootScope, $scope, BibleFactory) {
     });
   };
 
-  $scope.loadChapters = (book_id) => {
-  	BibleFactory.getChapters(book_id)
+  $scope.loadChapters = (book_id, book_order) => {
+    console.log("loadChapters book_id, book_order", book_id, book_order);
+  	$scope.bookName = book_id;
+    $scope.bookNumber = book_order;
+    BibleFactory.getChapters(book_id)
     .then((chapters) => {
       $scope.chapters = chapters;
       console.log("chapters", chapters);
@@ -23,7 +28,14 @@ app.controller("BibleCtrl", function($rootScope, $scope, BibleFactory) {
     });
   };
 
-  $scope.loadVerses = (chapter_id) => {
+  $scope.loadVerses = (chapter_id, bookNumber, bookName) => {
+    console.log("load verses chapter_id", chapter_id, "bookNumber", bookNumber, "bookName", bookName);
+    let testament = "OT";
+    // bookNumber = parseInt(book_order);
+    if (bookNumber > 39) {
+      testament = "NT";
+    }
+
     BibleFactory.getVerses(chapter_id)
     .then((verses) => {
       $scope.verses = verses;
