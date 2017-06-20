@@ -48,7 +48,7 @@ app.config(function($routeProvider) {
       controller: "BibleCtrl",
       resolve: {isAuth}    
     })
-    .when("/newNote", {
+    .when("/newNote/:book_name/:book_id/:chapter_id/:verse_id", {
       templateUrl: "partials/newNote.html",
       controller: "NewNoteCtrl",
       resolve: {isAuth}
