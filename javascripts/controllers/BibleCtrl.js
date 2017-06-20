@@ -1,6 +1,6 @@
 app.controller("BibleCtrl", function($rootScope, $scope, BibleFactory) {
-  $scope.bookName = {};
-	$scope.bookNumber = {};
+  $scope.book_id = "";
+  $scope.book_order = "";
   let NT = "ENGNASN2ET";
   let OT = "ENGNASO2ET";
 
@@ -8,6 +8,7 @@ app.controller("BibleCtrl", function($rootScope, $scope, BibleFactory) {
     BibleFactory.getBible()
     .then((books) => {
     	$scope.books = books;
+      console.log("loadBible books", books);
     })
     .catch((error) => {
     	console.log("error in loadBible", error);
@@ -15,9 +16,9 @@ app.controller("BibleCtrl", function($rootScope, $scope, BibleFactory) {
   };
 
   $scope.loadChapters = (book_id, book_order) => {
-    console.log("loadChapters book_id, book_order", book_id, book_order);
-  	$scope.bookName = book_id;
-    $scope.bookNumber = book_order;
+    $scope.book_id = book_id;
+    $scope.book_order = book_order;   
+    console.log("loadChapters book_id:", book_id);
     BibleFactory.getChapters(book_id)
     .then((chapters) => {
       $scope.chapters = chapters;
@@ -28,15 +29,15 @@ app.controller("BibleCtrl", function($rootScope, $scope, BibleFactory) {
     });
   };
 
-  $scope.loadVerses = (chapter_id, bookNumber, bookName) => {
-    console.log("load verses chapter_id", chapter_id, "bookNumber", bookNumber, "bookName", bookName);
-    let testament = "OT";
-    // bookNumber = parseInt(book_order);
+  $scope.loadVerses = (book_id, book_order, chapter_id) => {
+    console.log("load verses chapter_id", chapter_id, "book_id", book_id, "book_order", book_order);
+    let testament = OT;
+    let bookNumber = parseInt(book_order);
     if (bookNumber > 39) {
-      testament = "NT";
+      testament = NT;
     }
 
-    BibleFactory.getVerses(chapter_id)
+    BibleFactory.getVerses(testament, book_id, chapter_id)
     .then((verses) => {
       $scope.verses = verses;
       console.log("verses", verses);
@@ -46,8 +47,8 @@ app.controller("BibleCtrl", function($rootScope, $scope, BibleFactory) {
     });
   };
 
-  $scope.getVerseData = (book_name, chapter_id, verse_id) => {
-    console.log("verse data", book_name, chapter_id, verse_id);
+  $scope.getVerseData = (book_id, chapter_id, verse_id) => {
+    console.log("verse data", book_id, chapter_id, ":", verse_id);
   };
   
   loadBible();

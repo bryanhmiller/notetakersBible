@@ -13,8 +13,8 @@ app.factory("BibleFactory", function($http, $q) {
     });  
   };
 
-  let getChapters = (book_id, book_order) => {
-    console.log("book_order in getChapters", book_order);
+  let getChapters = (book_id) => {
+    console.log("getChapters book_id:", book_id);
     let chapters = [];
     return $q((resolve, reject) => {
       $http.get(`http://dbt.io/library/chapter?key=c0c769e931f78307a6c1c65cc5bd1d8c&dam_id=ENGNAS&book_id=${book_id}&v=2`)
@@ -27,12 +27,11 @@ app.factory("BibleFactory", function($http, $q) {
     });  
   };
 
-  let getVerses = (chapter_id, bookNumber, bookName) => {
+  let getVerses = (testament, book_id, chapter_id) => {
     // console.log("book_id", book_id, "book_order", book_order, "chapter_id", chapter_id);
     let verses = [];
     return $q((resolve, reject) => {
-      $http.get(`http://dbt.io/text/verse?key=c0c769e931f78307a6c1c65cc5bd1d8c&dam_id=ENGNASO2ET&book_id=Gen&chapter_id=1&v=2`)
-      // $http.get(`http://dbt.io/text/verse?key=c0c769e931f78307a6c1c65cc5bd1d8c&dam_id=${testament}&book_id=${book_id}&chapter_id=${chapter_id}&v=2`)
+      $http.get(`http://dbt.io/text/verse?key=c0c769e931f78307a6c1c65cc5bd1d8c&dam_id=${testament}&book_id=${book_id}&chapter_id=${chapter_id}&v=2`)
       .then((apiVerses) => {
           resolve(apiVerses.data);
           console.log("apiVerses.data in getVerses",apiVerses.data);
