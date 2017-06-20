@@ -36,7 +36,7 @@ app.controller("BibleCtrl", function($location, $rootScope, $scope, BibleFactory
     if (bookNumber > 39) {
       testament = NT;
     }
-
+    $rootScope.currentText = {testament:testament, book_id:book_id, book_order:book_order, chapter_id:chapter_id};
     BibleFactory.getVerses(testament, book_id, chapter_id)
     .then((verses) => {
       $scope.verses = verses;
@@ -54,7 +54,9 @@ app.controller("BibleCtrl", function($location, $rootScope, $scope, BibleFactory
   
   loadBible();
 
-
+  if($rootScope.currentText) {
+    $scope.loadVerses($rootScope.currentText.book_id, $rootScope.currentText.book_order, $rootScope.currentText.chapter_id);
+  }
   
 
 
