@@ -2,27 +2,27 @@
     "notes": {
         "note0": {
             "date": "12-25-17@17:00",
-            "img": "image.jpg",
+            "img": "https://dc95wa4w5yhv.cloudfront.net/image-cache/what-are-ten-commandments_833_460_80_c1.jpg",
             "is_personal": false,
             "is_sermon": true,
             "is_verses": false,
             "keyword_id":"keyword0",
             "location": "First Baptist Atlanta",
-            "note": "This is the note that I wrote for this seed file",
+            "note": "This is the note about a sermon on the ten commandments",
             "pastor": "Charles Stanley",
-            "scripture_ref": "Genesis1",
+            "scripture_ref": "Exodus 20:20",
             "uid": "2QJUZxolbTeepcW9sj44pLdTz622",
-            "url": "www.url.com"
+            "url": "www.intouch.org"
         },
        "note1": {
             "date": "6-15-17@18:00",
-            "img": "anotherimage.jpg",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyizW6ysvhmOr0V0_v64no6Sxj8IU79W_PlGRS-TiqPiNfC5g2Lg",
             "is_personal": true,
             "is_sermon": false,
             "is_verses": false,
             "keyword_id": "keyword0",
             "location": "",
-            "note": "This is the note that I copied for this seed file",
+            "note": "This note is about God's love for mankind",
             "pastor": "",
             "scripture_ref": "John 3:16",
             "uid": "VkleUbXR8Rgw5uUt1IreAKB4bpL2",
@@ -30,15 +30,16 @@
         },
        "note2": {
             "date": "11-03-1942@17:00",
-            "img": "image.jpg",
+            "img": "http://lifewithoutbaby.com/wp-content/uploads/path.jpg",
             "is_personal": false,
             "is_sermon": false,
             "is_verses": true,
             "keyword_id": "",
             "location": "",
-            "note": "I don't remember what is_verses is for",
+            "note": "The path we take in life, requires trusting more than we understand",
             "pastor": "",
             "scripture_ref": "Proverbs 3:5",
+            "scripture_url": "Proverbs/Prov/3/5",
             "uid": "VkleUbXR8Rgw5uUt1IreAKB4bpL2",
             "url": ""
         }        
