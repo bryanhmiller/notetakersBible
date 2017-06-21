@@ -1,3 +1,7 @@
 body {
-  background-color: #FFC24C;
+  background-image: url("http://graceclovis.org/wp-content/uploads/2015/02/hebrew-text-closeup.jpg");
+  background-size: cover;
   color: #676359; }
+
+.auth {
+  margin: 5px; }

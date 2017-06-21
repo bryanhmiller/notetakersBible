@@ -57,7 +57,7 @@ app.controller("BibleCtrl", function($location, $rootScope, $scope, BibleFactory
   if($rootScope.currentText) {
     $scope.loadVerses($rootScope.currentText.book_id, $rootScope.currentText.book_order, $rootScope.currentText.chapter_id);
   }
-  
+
 
 
 });  

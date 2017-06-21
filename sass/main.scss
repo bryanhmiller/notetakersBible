@@ -1,7 +1,12 @@
 @import "colors";
 
 body {
-	background-color: $myyellow;
+	background-image: url("http://graceclovis.org/wp-content/uploads/2015/02/hebrew-text-closeup.jpg");	
+	background-size: cover;
 	color: $mygray;
+}
+
+.auth {
+	margin: 5px;
 }
 

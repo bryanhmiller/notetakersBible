@@ -3,10 +3,6 @@ app.controller("NewNoteCtrl", function($http, $location, $q, $rootScope, $routeP
   let bookId = $routeParams.book_id;
   let chapterId = $routeParams.chapter_id;
   let verseId = $routeParams.verse_id;
-  // console.log("$routeParams.book_name", $routeParams.book_name);
-  // console.log("$routeParams.book_name", $routeParams.book_name);
-  // console.log("$routeParams.book_name", $routeParams.book_name);
-  // console.log("$routeParams.book_name", $routeParams.book_name);
   $scope.scripture_ref = `${bookName} ${chapterId}: ${verseId}`;
   $scope.scripture_url = `${bookName}/${bookId}/${chapterId}/${verseId}`;  
 console.log("$scope.scripture_ref", $scope.scripture_ref);
