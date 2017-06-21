@@ -1,7 +1,20 @@
 body {
   background-image: url("http://graceclovis.org/wp-content/uploads/2015/02/hebrew-text-closeup.jpg");
   background-size: cover;
-  color: #676359; }
+  color: #221701; }
 
 .auth {
-  margin: 5px; }
+  margin: 5px;
+  box-shadow: -2px 2px 3px #221701; }
+
+.auth-container {
+  margin-top: 117px; }
+
+.navbar {
+  background-image: url(https://www.advantagelumber.com/images/lumber/xwalnut.jpg.pagespeed.ic.I5scP_b41Z.jpg);
+  background-size: cover;
+  border: 1px solid #221701;
+  box-shadow: -1px 2px 3px #221701; }
+
+.navbar-custom {
+  text-shadow: -1px 1px 1px #F4E5C1; }
