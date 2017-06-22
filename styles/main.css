@@ -21,11 +21,15 @@ body {
 
 .navbar-default .navbar-brand {
   color: #F4E5C1;
-  text-shadow: -1px 1px 1px #221701; }
+  text-shadow: -2px 2px 2px #221701; }
 
 .navbar-default .navbar-nav > li > a {
   color: #F4E5C1;
-  text-shadow: -1px 1px 1px #221701; }
+  text-shadow: -1px 1px 3px #221701; }
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #221701;
+  text-shadow: -1px 1px 3px #F4E5C1; }
 
 .btn-group > .btn:first-child {
   margin-left: 0;
@@ -33,3 +37,6 @@ body {
 
 .panel {
   box-shadow: -2px 2px 3px #221701; }
+
+label {
+  background-color: rgba(244, 229, 193, 0.5) !important; }

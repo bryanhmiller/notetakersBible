@@ -28,12 +28,17 @@ body {
 
 .navbar-default .navbar-brand {
   color: $parchment;
-	text-shadow: -1px 1px 1px $ink;
+	text-shadow: -2px 2px 2px $ink;
 }
 
 .navbar-default .navbar-nav > li > a {
   color: $parchment;
-	text-shadow: -1px 1px 1px $ink;
+	text-shadow: -1px 1px 3px $ink;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: $ink;
+	text-shadow: -1px 1px 3px $parchment;
 }
 
 .btn-group > .btn:first-child {
@@ -43,4 +48,8 @@ body {
 
 .panel {
 	box-shadow: -2px 2px 3px $ink;	
+}
+
+label {
+	background-color: $transparentparchment !important;
 }
