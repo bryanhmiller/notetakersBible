@@ -7,6 +7,13 @@ body {
   margin: 5px;
   box-shadow: -2px 2px 3px #221701; }
 
+.btn-primary, .btn-success {
+  color: #221701;
+  background-image: url("https://americangoldleaf.com/image/cache/catalog/agoya-mother-of-pearl-sheet-773-800x800.jpg");
+  background-size: cover;
+  margin: 5px;
+  box-shadow: -2px 2px 3px #221701; }
+
 .auth-container {
   margin-top: 117px; }
 
