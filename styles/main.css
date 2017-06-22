@@ -16,5 +16,20 @@ body {
   border: 1px solid #221701;
   box-shadow: -1px 2px 3px #221701; }
 
-.navbar-custom {
-  text-shadow: -1px 1px 1px #F4E5C1; }
+.panel-body {
+  box-shadow: -2px 2px 3px #221701; }
+
+.navbar-default .navbar-brand {
+  color: #F4E5C1;
+  text-shadow: -1px 1px 1px #221701; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #F4E5C1;
+  text-shadow: -1px 1px 1px #221701; }
+
+.btn-group > .btn:first-child {
+  margin-left: 0;
+  box-shadow: -2px 2px 3px #221701; }
+
+.panel {
+  box-shadow: -2px 2px 3px #221701; }

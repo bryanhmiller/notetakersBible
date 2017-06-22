@@ -22,11 +22,25 @@ body {
 	box-shadow: -1px 2px 3px $ink;
 }
 
-.navbar-custom {
-	text-shadow: -1px 1px 1px $parchment;
+.panel-body {
+	box-shadow: -2px 2px 3px $ink;
 }
 
-.noteImage {
-	max-width: 800px;
-	height: 100%;
+.navbar-default .navbar-brand {
+  color: $parchment;
+	text-shadow: -1px 1px 1px $ink;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: $parchment;
+	text-shadow: -1px 1px 1px $ink;
+}
+
+.btn-group > .btn:first-child {
+  margin-left: 0;
+	box-shadow: -2px 2px 3px $ink;
+}
+
+.panel {
+	box-shadow: -2px 2px 3px $ink;	
 }
