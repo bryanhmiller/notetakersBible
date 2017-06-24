@@ -2,7 +2,7 @@ app.controller("ReadNoteCtrl", function($location, $rootScope, $scope, NoteFacto
 	$scope.notes = [];
 
   let getNotes = () => {	
-  	NoteFactory.getNoteList($rootScope).then((notes) => {
+  	NoteFactory.getNoteList($rootScope.user.uid).then((notes) => {
       console.log("inside getNotes");
       $scope.notes = notes;
     }).catch((error) => {

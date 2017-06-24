@@ -15,7 +15,7 @@ app.factory("NoteFactory", function($http, $q, FIREBASE_CONFIG) {
     let notes = [];
     console.log("userId in getNoteList", userId);
     return $q((resolve, reject) => {
-      $http.get(`${FIREBASE_CONFIG.databaseURL}/notes.json`)
+      $http.get(`${FIREBASE_CONFIG.databaseURL}/notes.json?orderBy="uid"&equalTo="${userId}"`)
       .then((fbNotes) => {
         console.log("fbNotes in getNoteList", fbNotes);
           var noteCollection = fbNotes.data;
