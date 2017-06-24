@@ -1,0 +1,39 @@
+<div>
+	<h3 class="shadow">Edit Note</h3>
+<!--     <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-primary">Personal</button>
+        <button type="button" class="btn btn-primary">Sermon</button>
+        <button type="button" class="btn btn-primary">Keyword</button>
+    </div>
+    <h5>Please select the type of note</h5> -->
+        <form>
+            <div class="form-group">
+                <label>Keyword</label>
+                <input type="text" class="form-control" placeholder="Enter keyword" ng-model="keyword.word"/>
+            </div>
+        </form>
+        <form>
+            <div class="form-group">
+                <label>Scripture Reference</label>
+                <h4 class="shadow">{{scripture_ref}}</h4>
+                <label>Note</label>
+                <input type="text" class="form-control" placeholder="Enter note text here ..." ng-model="Note.note"/>
+            </div>
+        
+            <div class="form-group">
+                <label>Web Link</label>
+                <input type="text" class="form-control" placeholder="www.relevantlink.com" ng-model="Note.url"/>
+                <label>Image Link</label>
+                <input type="text" class="form-control" placeholder="webaddress/image.jpg" ng-model="Note.img"/>
+            </div>
+            <div class="form-group">
+                <label>Date</label>
+                <input type="text" class="form-control" placeholder="09-17-2017" ng-model="Note.date"/>
+                <label>Location</label>
+                <input type="text" class="form-control" placeholder="First Baptist Atlanta" ng-model="Note.location"/>
+                <label>Pastor</label>
+                <input type="text" class="form-control" placeholder="Charles F. Stanley" ng-model="Note.pastor"/>
+            </div>
+            <button class="btn btn-primary" ng-click="addNewNote()">Update Note</button>
+            <button class="btn btn-primary" ng-click="addNewKeyword()">Add Keyword</button>
+        </form>

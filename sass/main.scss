@@ -1,6 +1,64 @@
 @import "colors";
 
 body {
-	background-color: $myyellow;
-	color: $mygray;
+	background-image: url("http://graceclovis.org/wp-content/uploads/2015/02/hebrew-text-closeup.jpg");	
+	background-size: cover;
+	color: $ink;
+}
+
+.auth, .btn-primary {
+	margin: 5px;
+	box-shadow: -2px 2px 3px $ink;
+}
+
+.btn-primary, .btn-success, .btn-danger, .btn-default {
+	color: $ink;
+	background-image: url("https://americangoldleaf.com/image/cache/catalog/agoya-mother-of-pearl-sheet-773-800x800.jpg");
+	background-size: cover;
+	margin: 5px;
+	box-shadow: -2px 2px 3px $ink;
+}
+
+.auth-container {
+	margin-top: 117px;
+}
+
+.navbar {
+	background-image: url(https://www.advantagelumber.com/images/lumber/xwalnut.jpg.pagespeed.ic.I5scP_b41Z.jpg);
+	background-size: cover;
+	border: 1px solid $ink;
+	box-shadow: -1px 2px 3px $ink;
+}
+
+.panel-body {
+	box-shadow: -2px 2px 3px $ink;
+}
+
+.navbar-default .navbar-brand {
+  color: $parchment;
+	text-shadow: -2px 2px 2px $ink;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: $parchment;
+	text-shadow: -1px 1px 3px $ink;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: $ink;
+	text-shadow: -1px 1px 3px $parchment;
+}
+
+.btn-group > .btn:first-child {
+  margin-left: 0;
+	box-shadow: -2px 2px 3px $ink;
+}
+
+.panel {
+	box-shadow: -2px 2px 3px $ink;	
+}
+
+label, h3.shadow, h4.shadow {
+	// background-color: $transparentparchment !important;
+	text-shadow: 0px 0px 15px $parchment;
 }
