@@ -3,6 +3,10 @@ body {
   background-size: cover;
   color: #221701; }
 
+.dropdown-menu {
+  max-height: 500px;
+  overflow-y: auto; }
+
 .auth, .btn-primary {
   margin: 5px;
   box-shadow: -2px 2px 3px #221701; }
