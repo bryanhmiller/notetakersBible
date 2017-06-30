@@ -33,6 +33,20 @@ body {
 	background-size: cover;
 	border: 1px solid $ink;
 	box-shadow: -1px 2px 3px $ink;
+	width: 101%;
+}
+
+.textarea {
+	overflow-y: auto;
+	width: 100%;
+}
+
+li:hover, p:hover {
+	color: $ink;
+	background-image: url("https://americangoldleaf.com/image/cache/catalog/agoya-mother-of-pearl-sheet-773-800x800.jpg");
+	background-size: cover;
+	margin: 5px;
+	box-shadow: -2px 2px 3px $ink;
 }
 
 .panel-body {
