@@ -33,7 +33,7 @@ textarea {
   height: 300px;
   width: 100%; }
 
-li:hover, p:hover {
+li.booksAndChapters:hover, p:hover {
   color: #221701;
   background-image: url("https://americangoldleaf.com/image/cache/catalog/agoya-mother-of-pearl-sheet-773-800x800.jpg");
   background-size: cover;
