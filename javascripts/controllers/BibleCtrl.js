@@ -47,8 +47,8 @@ app.controller("BibleCtrl", function($location, $rootScope, $scope, BibleFactory
     });
   };
 
-  $scope.getVerseData = (book_name, book_id, chapter_id, verse_id) => {
-    console.log("verse data", book_name, book_id, chapter_id, ":", verse_id);
+  $scope.getVerseData = (book_name, book_id, chapter_id, verse_id, verse_text) => {
+    console.log("verse data", book_name, book_id, chapter_id, ":", verse_id, verse_text);
     $location.url(`/newNote/${book_name}/${book_id}/${chapter_id}/${verse_id}`);
   };
   

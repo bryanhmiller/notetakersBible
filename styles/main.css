@@ -3,6 +3,10 @@ body {
   background-size: cover;
   color: #221701; }
 
+.dropdown-menu {
+  max-height: 500px;
+  overflow-y: auto; }
+
 .auth, .btn-primary {
   margin: 5px;
   box-shadow: -2px 2px 3px #221701; }
@@ -21,7 +25,20 @@ body {
   background-image: url(https://www.advantagelumber.com/images/lumber/xwalnut.jpg.pagespeed.ic.I5scP_b41Z.jpg);
   background-size: cover;
   border: 1px solid #221701;
-  box-shadow: -1px 2px 3px #221701; }
+  box-shadow: -1px 2px 3px #221701;
+  width: 101%; }
+
+textarea {
+  overflow-y: auto;
+  height: 300px;
+  width: 100%; }
+
+li.booksAndChapters:hover, p:hover {
+  color: #221701;
+  background-image: url("https://americangoldleaf.com/image/cache/catalog/agoya-mother-of-pearl-sheet-773-800x800.jpg");
+  background-size: cover;
+  margin: 5px;
+  box-shadow: -2px 2px 3px #221701; }
 
 .panel-body {
   box-shadow: -2px 2px 3px #221701; }
@@ -47,3 +64,6 @@ body {
 
 label, h3.shadow, h4.shadow {
   text-shadow: 0px 0px 15px #F4E5C1; }
+
+.thumbnail {
+  margin: 0 auto 20px; }

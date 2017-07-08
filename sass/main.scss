@@ -6,6 +6,11 @@ body {
 	color: $ink;
 }
 
+.dropdown-menu {
+	max-height: 500px;
+	overflow-y: auto;
+}
+
 .auth, .btn-primary {
 	margin: 5px;
 	box-shadow: -2px 2px 3px $ink;
@@ -28,6 +33,21 @@ body {
 	background-size: cover;
 	border: 1px solid $ink;
 	box-shadow: -1px 2px 3px $ink;
+	width: 101%;
+}
+
+textarea {
+	overflow-y: auto;
+	height: 300px;
+	width: 100%;
+}
+
+li.booksAndChapters:hover, p:hover {
+	color: $ink;
+	background-image: url("https://americangoldleaf.com/image/cache/catalog/agoya-mother-of-pearl-sheet-773-800x800.jpg");
+	background-size: cover;
+	margin: 5px;
+	box-shadow: -2px 2px 3px $ink;
 }
 
 .panel-body {
@@ -61,4 +81,8 @@ body {
 label, h3.shadow, h4.shadow {
 	// background-color: $transparentparchment !important;
 	text-shadow: 0px 0px 15px $parchment;
+}
+
+.thumbnail {
+	margin: 0 auto 20px;
 }
